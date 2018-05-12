@@ -50,7 +50,17 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+  for (var i = employees.length - 1; i >= 0; i--){
+     if (employees[i].firstName === "Theo"){
+       employees.splice(i,1)
+     }
+     if(employees[i].firstName === "Lorie"){
+       employees[i].department = "HR"
+     }
+  }
+  return employees
+}
 
 
 
@@ -157,6 +167,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(){
+  for (var i = 0; i < numsArr.length; i++){
+   for (var j = 0; j < numsArr[i].length; j++){
+     if (numsArr[i][j] % 2 === 0){
+       numsArr[i][j] = 'even'
+     } else{
+       numsArr[i][j] = 'odd'
+     }
+   }
+  }
+  return numsArr
+}
 
 
